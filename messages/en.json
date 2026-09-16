@@ -1,0 +1,328 @@
+{
+  "meta": {
+    "title": "SkillMente — Life skills that move from learning to real life",
+    "description": "Evidence-based life skills programs for youth and caregivers. Digital, facilitated, and blended modalities for organizations, schools, and public agencies."
+  },
+  "nav": {
+    "home": "Home",
+    "programs": "Programs",
+    "howItWorks": "How It Works",
+    "whoWeServe": "Who We Serve",
+    "about": "About",
+    "contact": "Contact",
+    "cta": "Talk to Us",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "footer": {
+    "tagline": "Life skills that move from learning to real life.",
+    "institutional": "Institutional",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use",
+    "copyright": "© {year} SkillMente. All rights reserved.",
+    "trademark": "SkillMente®",
+    "email": "info@skillmente.com",
+    "phone": "+1 (835) 205-7899"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Prevention that becomes daily practice",
+      "title": "Life skills that move from learning to real life.",
+      "subtitle": "We help organizations turn SEL and prevention programs into sustained practice — with digital pathways, facilitated circles, and measurable outcomes.",
+      "ctaPrimary": "Explore Our Programs",
+      "ctaSecondary": "Talk to Us",
+      "mockupLabel": "SkillPath · Soft Skills Lab",
+      "mockupMission": "Today's micro-mission",
+      "mockupProgress": "Progress this week"
+    },
+    "process": {
+      "eyebrow": "What SkillMente does",
+      "title": "From learning to lasting change",
+      "subtitle": "A clear five-phase cycle that keeps skills alive after the session ends.",
+      "phases": {
+        "learn": { "label": "Learn", "desc": "Short, focused content designed for real attention spans." },
+        "practice": { "label": "Practice", "desc": "Daily micro-missions that turn insight into habit." },
+        "engage": { "label": "Engage", "desc": "Facilitated and family connection that reinforces skills." },
+        "track": { "label": "Track", "desc": "Participation and progress visible to your team." },
+        "measure": { "label": "Measure", "desc": "Pre/post assessments and indicators that inform decisions." }
+      },
+      "modalitiesTitle": "Delivery modalities",
+      "modalities": {
+        "digital": { "title": "Digital self-paced", "desc": "Independent learning with guided micro-missions." },
+        "group": { "title": "Facilitated group", "desc": "Structured circles led by your trained team." },
+        "individual": { "title": "One-on-one", "desc": "Individual coaching pathways for deeper support." },
+        "blended": { "title": "Blended", "desc": "Combine digital practice with live facilitation." }
+      }
+    },
+    "programs": {
+      "eyebrow": "Our programs",
+      "title": "Programs built for youth and caregivers",
+      "subtitle": "Two complementary catalogs — ready to license, pilot, or scale with your team.",
+      "skillpath": {
+        "badge": "Ages 11–17",
+        "title": "SkillPath",
+        "desc": "Life skills pathways for adolescents — digital, facilitated, and leadership tracks.",
+        "items": [
+          "SkillPath Foundations",
+          "SkillMente Circle® L1",
+          "SkillMente Circle® L2",
+          "Soft Skills Lab — Builder Track"
+        ],
+        "cta": "Explore SkillPath"
+      },
+      "skillparenting": {
+        "badge": "Parents & caregivers",
+        "title": "SkillParenting",
+        "desc": "Six programs that strengthen caregiving, communication, prevention, and family connection.",
+        "stats": ["6 Programs", "Facilitated", "Individual", "Digital"],
+        "cta": "Explore SkillParenting"
+      }
+    },
+    "implementation": {
+      "eyebrow": "Institutional implementation",
+      "title": "Built for organizations that need to scale",
+      "subtitle": "Choose how you roll out — we support licensing, pilots, and train-the-trainer models.",
+      "items": {
+        "implement": { "title": "Implement", "desc": "Ready-to-use curricula with facilitator guides and digital pathways." },
+        "engage": { "title": "Engage", "desc": "Keep participants, families, and professionals aligned around practice." },
+        "measure": { "title": "Measure", "desc": "Track participation, progress, and pre/post outcomes with confidence." }
+      }
+    },
+    "finalCta": {
+      "title": "Ready to bring SkillMente to your organization?",
+      "subtitle": "Tell us about your context — we'll help you choose the right program and implementation model.",
+      "cta": "Start the Conversation"
+    }
+  },
+  "programs": {
+    "hero": {
+      "eyebrow": "Programs",
+      "title": "A catalog built for real institutional delivery",
+      "subtitle": "SkillPath for youth and SkillParenting for caregivers — designed to license, facilitate, and measure."
+    },
+    "skillpath": {
+      "title": "SkillPath — Youth catalog",
+      "subtitle": "Ages 11–17 · Digital, facilitated group, and one-on-one options.",
+      "items": {
+        "foundations": {
+          "title": "SkillPath Foundations",
+          "meta": "Ages 11–17 · Digital Self-Paced · 10 micro-missions",
+          "desc": "An entry pathway that builds core life skills through short digital missions."
+        },
+        "circle1": {
+          "title": "SkillMente Circle® — Level 1",
+          "meta": "Facilitated group / Individual · 8 sessions",
+          "desc": "Focus on emotional regulation, decision-making, and communication."
+        },
+        "circle2": {
+          "title": "SkillMente Circle® — Level 2",
+          "meta": "Youth in justice / probation / child welfare · 8 sessions",
+          "desc": "Deeper practice for adolescents in higher-intensity support contexts."
+        },
+        "softSkills": {
+          "title": "SkillMente™ Soft Skills Lab — Builder Track",
+          "meta": "Youth leaders · Digital Self-Paced · 7 micro-missions / 30 days",
+          "desc": "A leadership track that strengthens soft skills through daily practice."
+        }
+      }
+    },
+    "skillparenting": {
+      "title": "SkillParenting — Caregiver catalog",
+      "subtitle": "Six programs for parents and caregivers — facilitated, individual, or digital.",
+      "items": {
+        "p1": {
+          "title": "Life Skills for Parents: Care how you care",
+          "focus": "Self-awareness and stress",
+          "desc": "Help caregivers regulate themselves so they can support others with clarity."
+        },
+        "p2": {
+          "title": "Bond: Close, even as they grow",
+          "focus": "Relationship and boundaries with adolescents",
+          "desc": "Strengthen connection while setting healthy limits during adolescence."
+        },
+        "p3": {
+          "title": "Communication & Coexistence: Without losing calm",
+          "focus": "Conflict resolution",
+          "desc": "Practical tools for hard conversations and everyday coexistence."
+        },
+        "p4": {
+          "title": "Signals & Prevention: See it in time",
+          "focus": "Early alerts before crisis",
+          "desc": "Recognize early warning signs and act before situations escalate."
+        },
+        "p5": {
+          "title": "Parenting: Without crossing the line",
+          "focus": "Clear limits vs. neglect / abuse",
+          "desc": "Build firm, caring boundaries with safety and dignity at the center."
+        },
+        "p6": {
+          "title": "Youth System: Understand it before living it",
+          "focus": "Juvenile legal prevention",
+          "desc": "Help families navigate the youth justice system with informed prevention."
+        }
+      }
+    },
+    "ttt": {
+      "eyebrow": "Scale internally",
+      "title": "Train-the-Trainer",
+      "subtitle": "Prepare your internal teams to facilitate and scale without relying on permanent external facilitators.",
+      "points": [
+        "Facilitator guides and session structures ready to use",
+        "Consistent delivery quality across sites and cohorts",
+        "A sustainable model for multi-site organizations"
+      ],
+      "cta": "Talk about Train-the-Trainer"
+    }
+  },
+  "howItWorks": {
+    "hero": {
+      "eyebrow": "How it works",
+      "title": "Six steps for institutional buyers",
+      "subtitle": "A clear path from program selection to measurable outcomes."
+    },
+    "steps": {
+      "s1": {
+        "title": "Choose the right program",
+        "desc": "Match SkillPath or SkillParenting offerings to your population, goals, and delivery capacity."
+      },
+      "s2": {
+        "title": "Choose how to implement it",
+        "desc": "Select digital, facilitated group, one-on-one, or blended — plus pilot or licensing models."
+      },
+      "s3": {
+        "title": "Prepare your team",
+        "desc": "Equip facilitators with guides, session flows, and the support needed for consistent delivery."
+      },
+      "s4": {
+        "title": "Participants learn and practice",
+        "desc": "Short learning moments connect to daily micro-missions so skills stick beyond the room."
+      },
+      "s5": {
+        "title": "Track participation and progress",
+        "desc": "Follow engagement and skill practice so teams can intervene early and stay aligned."
+      },
+      "s6": {
+        "title": "Measure what happens",
+        "desc": "Use pre/post assessments and indicators to demonstrate impact and improve decisions."
+      }
+    },
+    "cta": {
+      "title": "Want help designing your rollout?",
+      "button": "Talk to Us"
+    }
+  },
+  "whoWeServe": {
+    "hero": {
+      "eyebrow": "Who we serve",
+      "title": "Built for organizations that need results at scale",
+      "subtitle": "Four institutional profiles — one shared goal: practice that lasts after the session."
+    },
+    "segments": {
+      "nonprofit": {
+        "title": "Nonprofits & community organizations",
+        "desc": "Ready-to-go programs without building curriculum from scratch — so your team can focus on delivery and relationships."
+      },
+      "youth": {
+        "title": "Youth & family services",
+        "desc": "A complement to mentoring, case management, and family support with structured practice and visibility."
+      },
+      "schools": {
+        "title": "Schools & school districts",
+        "desc": "SEL, prevention, and extracurricular support that extends learning into daily habits."
+      },
+      "government": {
+        "title": "Government & public agencies",
+        "desc": "Standardized multi-site delivery with reliable reporting for large-scale implementation."
+      }
+    },
+    "cta": {
+      "title": "See if SkillMente fits your context",
+      "button": "Start the Conversation"
+    }
+  },
+  "about": {
+    "hero": {
+      "eyebrow": "About",
+      "title": "Why SkillMente exists",
+      "subtitle": "Learning only works if it is practiced consistently in real life."
+    },
+    "why": {
+      "title": "Practice is the missing layer",
+      "body": "Schools and organizations invest in prevention and social-emotional programs every year. Too often, the impact fades after the workshop. SkillMente was created to close that gap — connecting learning, daily practice, engagement, tracking, and measurement in one coherent system."
+    },
+    "vision": {
+      "title": "Focus & vision",
+      "items": {
+        "scale": { "title": "Scalability", "desc": "Designed for multi-site organizations that need consistent delivery." },
+        "micro": { "title": "Microlearning", "desc": "Short, actionable practice that fits real attention and real schedules." },
+        "impact": { "title": "Impact measurement", "desc": "Evidence and indicators that inform programs, funding, and policy." }
+      }
+    },
+    "team": {
+      "title": "Leadership",
+      "subtitle": "A modular team structure — starting with our co-founders.",
+      "members": {
+        "mayuri": {
+          "name": "Mayuri Mendoza",
+          "role": "Founder & CEO",
+          "bio": "Leads product vision, partnerships, and the mission to turn prevention into lasting practice."
+        },
+        "enrique": {
+          "name": "Enrique Mendoza",
+          "role": "Co-Founder & COO",
+          "bio": "Leads operations, implementation models, and organizational delivery at scale."
+        }
+      }
+    }
+  },
+  "contact": {
+    "hero": {
+      "eyebrow": "Contact",
+      "title": "Let's start the conversation",
+      "subtitle": "Tell us about your organization. We'll help you qualify the right program, pilot, or partnership path."
+    },
+    "form": {
+      "fullName": "Full name",
+      "organization": "Organization",
+      "role": "Role / institutional title",
+      "email": "Work email",
+      "phone": "Phone (optional)",
+      "interests": "I'm interested in",
+      "interestOptions": {
+        "skillpath": "SkillPath",
+        "skillparenting": "SkillParenting",
+        "pilot": "Pilot Program",
+        "licensing": "Program Licensing",
+        "ttt": "Train-the-Trainer",
+        "partnership": "Partnership",
+        "other": "Other"
+      },
+      "message": "Tell us about your organization and what you're looking for",
+      "submit": "Start the Conversation",
+      "sending": "Sending…",
+      "successTitle": "Message sent",
+      "successBody": "Thanks for reaching out. Our team will get back to you soon.",
+      "errorTitle": "Something went wrong",
+      "errorBody": "Please try again or email us at info@skillmente.com.",
+      "required": "Required field",
+      "invalidEmail": "Enter a valid email address",
+      "selectInterest": "Select at least one interest"
+    },
+    "aside": {
+      "title": "Prefer email or phone?",
+      "email": "info@skillmente.com",
+      "phone": "+1 (835) 205-7899"
+    }
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "updated": "Last updated: March 2026",
+    "body": "SkillMente is committed to protecting participant and organizational data. We collect only the information needed to respond to inquiries, deliver programs, and improve our services. Contact data submitted through this site is used solely for communication related to your request. For questions about data practices, contact info@skillmente.com."
+  },
+  "terms": {
+    "title": "Terms of Use",
+    "updated": "Last updated: March 2026",
+    "body": "By using this website you agree to use its content for lawful informational purposes. Program names, marks, and materials belonging to SkillMente are protected. Licensing, facilitation, and delivery of programs are governed by separate agreements. SkillMente® is a registered trademark of SkillMente."
+  }
+}
