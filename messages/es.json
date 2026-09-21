@@ -34,7 +34,11 @@
       "ctaSecondary": "Conversemos",
       "mockupLabel": "SkillPath · Soft Skills Lab",
       "mockupMission": "Micromisión de hoy",
-      "mockupProgress": "Progreso de esta semana"
+      "mockupProgress": "Progreso de esta semana",
+      "mockupDay": "Día 12",
+      "mockupPrompt": "Nombra una decisión que tomaste con calma hoy.",
+      "mockupSkills": "Habilidades practicadas",
+      "mockupProcessMap": "Mapa del proceso"
     },
     "process": {
       "eyebrow": "Qué hace SkillMente",

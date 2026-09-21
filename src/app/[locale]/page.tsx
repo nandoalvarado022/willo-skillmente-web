@@ -46,6 +46,10 @@ export default async function HomePage({
             label={t("hero.mockupLabel")}
             mission={t("hero.mockupMission")}
             progress={t("hero.mockupProgress")}
+            dayLabel={t("hero.mockupDay")}
+            prompt={t("hero.mockupPrompt")}
+            skillsPracticed={t("hero.mockupSkills")}
+            processMap={t("hero.mockupProcessMap")}
           />
         </div>
       </section>
@@ -152,7 +156,7 @@ export default async function HomePage({
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <p className="text-sm font-bold text-brand-orange">0{index + 1}</p>
-                <h3 className="mt-3 font-sans text-xl font-bold">
+                <h3 className="mt-3 font-sans text-xl font-bold text-white">
                   {t(`implementation.items.${key}.title`)}
                 </h3>
                 <p className="mt-3 text-sm text-white/75">

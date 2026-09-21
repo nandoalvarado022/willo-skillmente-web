@@ -1,19 +1,9 @@
 import { Logo } from "@/components/Logo";
+import { getNavItems, type NavLabels } from "@/config/navigation";
 import { Link } from "@/i18n/navigation";
 
-type NavItem = {
-  href: string;
-  label: string;
-};
-
 type HeaderProps = {
-  labels: {
-    home: string;
-    programs: string;
-    howItWorks: string;
-    whoWeServe: string;
-    about: string;
-    contact: string;
+  labels: NavLabels & {
     cta: string;
     openMenu: string;
     closeMenu: string;
@@ -23,14 +13,7 @@ type HeaderProps = {
 };
 
 export function Header({ labels, languageSwitcher, mobileMenu }: HeaderProps) {
-  const items: NavItem[] = [
-    { href: "/", label: labels.home },
-    { href: "/programs", label: labels.programs },
-    { href: "/how-it-works", label: labels.howItWorks },
-    { href: "/who-we-serve", label: labels.whoWeServe },
-    { href: "/about", label: labels.about },
-    { href: "/contact", label: labels.contact },
-  ];
+  const items = getNavItems(labels);
 
   return (
     <header className="sticky top-0 z-50 border-b border-[color-mix(in_srgb,var(--brand-navy)_12%,transparent)] bg-[color-mix(in_srgb,var(--brand-cream)_92%,white)]/95 backdrop-blur-md">

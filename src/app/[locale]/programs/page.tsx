@@ -1,4 +1,5 @@
 import { setRequestLocale, getTranslations } from "next-intl/server";
+import { PageHero } from "@/components/PageHero";
 import { Link } from "@/i18n/navigation";
 
 export default async function ProgramsPage({
@@ -16,13 +17,11 @@ export default async function ProgramsPage({
 
   return (
     <>
-      <section className="border-b border-[color-mix(in_srgb,var(--brand-navy)_10%,transparent)] bg-[linear-gradient(160deg,#f2eee9,#fff)]">
-        <div className="container-site max-w-3xl py-14 lg:py-20">
-          <p className="eyebrow">{t("hero.eyebrow")}</p>
-          <h1 className="text-4xl sm:text-5xl">{t("hero.title")}</h1>
-          <p className="mt-5 text-lg text-muted">{t("hero.subtitle")}</p>
-        </div>
-      </section>
+      <PageHero
+        eyebrow={t("hero.eyebrow")}
+        title={t("hero.title")}
+        subtitle={t("hero.subtitle")}
+      />
 
       <section id="skillpath" className="section scroll-mt-24">
         <div className="container-site">

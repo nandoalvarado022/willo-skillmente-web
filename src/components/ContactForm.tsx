@@ -1,119 +1,36 @@
 "use client";
 
-import { FormEvent, useState } from "react";
-
-const INTEREST_KEYS = [
-  "skillpath",
-  "skillparenting",
-  "pilot",
-  "licensing",
-  "ttt",
-  "partnership",
-  "other",
-] as const;
-
-type InterestKey = (typeof INTEREST_KEYS)[number];
+import {
+  INTEREST_KEYS,
+  useContactForm,
+  type ContactFormLabels,
+} from "@/hooks/useContactForm";
 
 type ContactFormProps = {
-  labels: {
-    fullName: string;
-    organization: string;
-    role: string;
-    email: string;
-    phone: string;
-    interests: string;
-    interestOptions: Record<InterestKey, string>;
-    message: string;
-    submit: string;
-    sending: string;
-    successTitle: string;
-    successBody: string;
-    errorTitle: string;
-    errorBody: string;
-    required: string;
-    invalidEmail: string;
-    selectInterest: string;
-  };
+  labels: ContactFormLabels;
 };
 
-type FormErrors = Partial<Record<"fullName" | "organization" | "role" | "email" | "interests" | "message", string>>;
-
 export function ContactForm({ labels }: ContactFormProps) {
-  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
-  const [errors, setErrors] = useState<FormErrors>({});
-  const [interests, setInterests] = useState<InterestKey[]>([]);
-
-  function toggleInterest(key: InterestKey) {
-    setInterests((prev) =>
-      prev.includes(key) ? prev.filter((item) => item !== key) : [...prev, key],
-    );
-  }
-
-  function validate(form: FormData): FormErrors {
-    const next: FormErrors = {};
-    const fullName = String(form.get("fullName") || "").trim();
-    const organization = String(form.get("organization") || "").trim();
-    const role = String(form.get("role") || "").trim();
-    const email = String(form.get("email") || "").trim();
-    const message = String(form.get("message") || "").trim();
-
-    if (!fullName) next.fullName = labels.required;
-    if (!organization) next.organization = labels.required;
-    if (!role) next.role = labels.required;
-    if (!email) next.email = labels.required;
-    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) next.email = labels.invalidEmail;
-    if (interests.length === 0) next.interests = labels.selectInterest;
-    if (!message) next.message = labels.required;
-
-    return next;
-  }
-
-  async function onSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    const formEl = event.currentTarget;
-    const formData = new FormData(formEl);
-    const nextErrors = validate(formData);
-    setErrors(nextErrors);
-    if (Object.keys(nextErrors).length > 0) return;
-
-    setStatus("sending");
-    try {
-      const payload = {
-        fullName: String(formData.get("fullName")),
-        organization: String(formData.get("organization")),
-        role: String(formData.get("role")),
-        email: String(formData.get("email")),
-        phone: String(formData.get("phone") || ""),
-        interests,
-        message: String(formData.get("message")),
-      };
-
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      });
-
-      if (!response.ok) throw new Error("Request failed");
-      setStatus("success");
-      formEl.reset();
-      setInterests([]);
-    } catch {
-      setStatus("error");
-    }
-  }
+  const { status, errors, interests, toggleInterest, handleSubmit } =
+    useContactForm(labels);
 
   if (status === "success") {
     return (
       <div className="surface-card p-6 sm:p-8">
-        <h3 className="font-sans text-xl font-bold text-brand-navy">{labels.successTitle}</h3>
+        <h3 className="font-sans text-xl font-bold text-brand-navy">
+          {labels.successTitle}
+        </h3>
         <p className="mt-2 text-muted">{labels.successBody}</p>
       </div>
     );
   }
 
   return (
-    <form onSubmit={onSubmit} className="surface-card space-y-5 p-6 sm:p-8" noValidate>
+    <form
+      onSubmit={handleSubmit}
+      className="surface-card space-y-5 p-6 sm:p-8"
+      noValidate
+    >
       <Field
         id="fullName"
         label={labels.fullName}
@@ -162,7 +79,10 @@ export function ContactForm({ labels }: ContactFormProps) {
       </fieldset>
 
       <div>
-        <label htmlFor="message" className="mb-2 block text-sm font-semibold text-brand-navy">
+        <label
+          htmlFor="message"
+          className="mb-2 block text-sm font-semibold text-brand-navy"
+        >
           {labels.message}
         </label>
         <textarea
@@ -184,7 +104,11 @@ export function ContactForm({ labels }: ContactFormProps) {
         </div>
       ) : null}
 
-      <button type="submit" className="btn btn-primary w-full sm:w-auto" disabled={status === "sending"}>
+      <button
+        type="submit"
+        className="btn btn-primary w-full sm:w-auto"
+        disabled={status === "sending"}
+      >
         {status === "sending" ? labels.sending : labels.submit}
       </button>
     </form>
@@ -206,7 +130,10 @@ function Field({
 }) {
   return (
     <div>
-      <label htmlFor={id} className="mb-2 block text-sm font-semibold text-brand-navy">
+      <label
+        htmlFor={id}
+        className="mb-2 block text-sm font-semibold text-brand-navy"
+      >
         {label}
       </label>
       <input

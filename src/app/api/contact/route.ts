@@ -1,46 +1,37 @@
 import { NextRequest, NextResponse } from "next/server";
-
-type ContactPayload = {
-  fullName?: string;
-  organization?: string;
-  role?: string;
-  email?: string;
-  phone?: string;
-  interests?: string[];
-  message?: string;
-};
+import { contactFormSchema } from "@/lib/contact-schema";
+import { sendContactEmail } from "@/lib/mail";
 
 export async function POST(request: NextRequest) {
   try {
-    const body = (await request.json()) as ContactPayload;
-    const { fullName, organization, role, email, interests, message } = body;
+    const body: unknown = await request.json();
+    const parsed = contactFormSchema.safeParse(body);
 
-    if (!fullName || !organization || !role || !email || !message) {
-      return NextResponse.json({ ok: false, error: "Missing required fields" }, { status: 400 });
+    if (!parsed.success) {
+      return NextResponse.json(
+        { ok: false, error: "Invalid contact payload", issues: parsed.error.flatten() },
+        { status: 400 },
+      );
     }
 
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      return NextResponse.json({ ok: false, error: "Invalid email" }, { status: 400 });
-    }
+    const data = parsed.data;
 
-    if (!Array.isArray(interests) || interests.length === 0) {
-      return NextResponse.json({ ok: false, error: "Select at least one interest" }, { status: 400 });
-    }
-
-    // Placeholder for email delivery integration (Resend, SES, etc.)
-    console.info("[SkillMente contact]", {
-      fullName,
-      organization,
-      role,
-      email,
-      phone: body.phone || null,
-      interests,
-      message,
-      receivedAt: new Date().toISOString(),
+    await sendContactEmail({
+      fullName: data.fullName,
+      organization: data.organization,
+      role: data.role,
+      email: data.email,
+      phone: data.phone || null,
+      interests: data.interests,
+      message: data.message,
     });
 
     return NextResponse.json({ ok: true });
-  } catch {
-    return NextResponse.json({ ok: false, error: "Invalid request" }, { status: 400 });
+  } catch (error) {
+    console.error("[SkillMente contact] failed to send email", error);
+    return NextResponse.json(
+      { ok: false, error: "Unable to send message" },
+      { status: 500 },
+    );
   }
 }

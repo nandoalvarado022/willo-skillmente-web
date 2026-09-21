@@ -1,5 +1,6 @@
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { ContactForm } from "@/components/ContactForm";
+import { PageHero } from "@/components/PageHero";
 
 export default async function ContactPage({
   params,
@@ -12,13 +13,11 @@ export default async function ContactPage({
 
   return (
     <>
-      <section className="border-b border-[color-mix(in_srgb,var(--brand-navy)_10%,transparent)] bg-[linear-gradient(160deg,#f2eee9,#fff)]">
-        <div className="container-site max-w-3xl py-14 lg:py-20">
-          <p className="eyebrow">{t("hero.eyebrow")}</p>
-          <h1 className="text-4xl sm:text-5xl">{t("hero.title")}</h1>
-          <p className="mt-5 text-lg text-muted">{t("hero.subtitle")}</p>
-        </div>
-      </section>
+      <PageHero
+        eyebrow={t("hero.eyebrow")}
+        title={t("hero.title")}
+        subtitle={t("hero.subtitle")}
+      />
 
       <section className="section">
         <div className="container-site grid gap-8 lg:grid-cols-[1.2fr_0.8fr]">
