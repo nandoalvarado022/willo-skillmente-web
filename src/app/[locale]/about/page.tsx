@@ -1,4 +1,5 @@
 import { setRequestLocale, getTranslations } from "next-intl/server";
+import { PageHero } from "@/components/PageHero";
 import { TeamGrid } from "@/components/TeamGrid";
 
 export default async function AboutPage({
@@ -27,13 +28,11 @@ export default async function AboutPage({
 
   return (
     <>
-      <section className="border-b border-[color-mix(in_srgb,var(--brand-navy)_10%,transparent)] bg-[linear-gradient(160deg,#f2eee9,#fff)]">
-        <div className="container-site max-w-3xl py-14 lg:py-20">
-          <p className="eyebrow">{t("hero.eyebrow")}</p>
-          <h1 className="text-4xl sm:text-5xl">{t("hero.title")}</h1>
-          <p className="mt-5 text-lg text-muted">{t("hero.subtitle")}</p>
-        </div>
-      </section>
+      <PageHero
+        eyebrow={t("hero.eyebrow")}
+        title={t("hero.title")}
+        subtitle={t("hero.subtitle")}
+      />
 
       <section className="section">
         <div className="container-site grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">

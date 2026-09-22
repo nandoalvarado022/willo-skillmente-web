@@ -1,12 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import type { NavItem } from "@/config/navigation";
 import { Link } from "@/i18n/navigation";
-
-type NavItem = {
-  href: string;
-  label: string;
-};
 
 type MobileMenuProps = {
   items: NavItem[];

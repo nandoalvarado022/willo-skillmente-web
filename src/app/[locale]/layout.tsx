@@ -6,6 +6,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { MobileMenu } from "@/components/MobileMenu";
+import { getNavItems } from "@/config/navigation";
 import { routing } from "@/i18n/routing";
 import "../globals.css";
 
@@ -65,14 +66,7 @@ export default async function LocaleLayout({
     closeMenu: tNav("closeMenu"),
   };
 
-  const mobileItems = [
-    { href: "/", label: navLabels.home },
-    { href: "/programs", label: navLabels.programs },
-    { href: "/how-it-works", label: navLabels.howItWorks },
-    { href: "/who-we-serve", label: navLabels.whoWeServe },
-    { href: "/about", label: navLabels.about },
-    { href: "/contact", label: navLabels.contact },
-  ];
+  const mobileItems = getNavItems(navLabels);
 
   return (
     <html lang={locale} className={`${display.variable} ${body.variable} h-full`}>
@@ -94,7 +88,7 @@ export default async function LocaleLayout({
           </div>
           <main className="flex-1">{children}</main>
           <Footer
-            year={2026}
+            year={new Date().getFullYear()}
             labels={{
               tagline: tFooter("tagline"),
               institutional: tFooter("institutional"),

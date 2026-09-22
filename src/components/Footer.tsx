@@ -1,8 +1,9 @@
 import { Logo } from "@/components/Logo";
+import { getNavItems, type NavLabels } from "@/config/navigation";
 import { Link } from "@/i18n/navigation";
 
 type FooterProps = {
-  labels: {
+  labels: NavLabels & {
     tagline: string;
     institutional: string;
     legal: string;
@@ -12,25 +13,12 @@ type FooterProps = {
     trademark: string;
     email: string;
     phone: string;
-    home: string;
-    programs: string;
-    howItWorks: string;
-    whoWeServe: string;
-    about: string;
-    contact: string;
   };
   year: number;
 };
 
 export function Footer({ labels, year }: FooterProps) {
-  const institutional = [
-    { href: "/", label: labels.home },
-    { href: "/programs", label: labels.programs },
-    { href: "/how-it-works", label: labels.howItWorks },
-    { href: "/who-we-serve", label: labels.whoWeServe },
-    { href: "/about", label: labels.about },
-    { href: "/contact", label: labels.contact },
-  ];
+  const institutional = getNavItems(labels);
 
   return (
     <footer className="mt-auto border-t border-[color-mix(in_srgb,var(--brand-navy)_12%,transparent)] bg-brand-navy text-white">
