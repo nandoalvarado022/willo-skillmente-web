@@ -51,8 +51,8 @@ export default async function ContactPage({
             }}
           />
 
-          <aside className="h-fit rounded-2xl bg-brand-navy p-6 text-white sm:p-8">
-            <h2 className="font-sans text-xl font-bold text-white">{t("aside.title")}</h2>
+          <aside className="h-fit rounded-2xl border border-[var(--line)] bg-brand-navy p-6 text-brand-paper sm:p-8">
+            <h2 className="font-sans text-xl font-bold text-brand-paper">{t("aside.title")}</h2>
             <a
               className="mt-4 block text-brand-orange hover:underline"
               href={`mailto:${t("aside.email")}`}
@@ -60,7 +60,7 @@ export default async function ContactPage({
               {t("aside.email")}
             </a>
             <a
-              className="mt-2 block text-white/85 hover:text-white"
+              className="mt-2 block text-brand-paper/85 hover:text-brand-paper"
               href={`tel:${t("aside.phone").replace(/\s/g, "")}`}
             >
               {t("aside.phone")}

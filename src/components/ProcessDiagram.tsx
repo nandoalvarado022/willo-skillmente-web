@@ -13,22 +13,14 @@ export function ProcessDiagram({ phases }: ProcessDiagramProps) {
       {phases.map((phase, index) => (
         <li
           key={phase.label}
-          className="relative rounded-2xl bg-white p-5 shadow-[0_12px_30px_rgba(63,77,105,0.08)]"
+          className="surface-card relative p-5 shadow-none"
           style={{ animationDelay: `${index * 80}ms` }}
         >
-          <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-brand-navy font-bold text-white">
-            {index + 1}
-          </div>
-          <h3 className="font-sans text-base font-bold text-brand-navy">{phase.label}</h3>
+          <p className="mb-4 text-sm font-bold tracking-[0.14em] text-brand-orange">
+            {String(index + 1).padStart(2, "0")}
+          </p>
+          <h3 className="font-sans text-base font-bold">{phase.label}</h3>
           <p className="mt-2 text-sm text-muted">{phase.desc}</p>
-          {index < phases.length - 1 ? (
-            <span
-              className="pointer-events-none absolute top-1/2 -right-3 hidden text-brand-orange lg:block"
-              aria-hidden
-            >
-              →
-            </span>
-          ) : null}
         </li>
       ))}
     </ol>

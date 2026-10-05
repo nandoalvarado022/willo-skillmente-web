@@ -18,7 +18,7 @@ export function MobileMenu({ items, cta, openLabel, closeLabel }: MobileMenuProp
     <div className="lg:hidden">
       <button
         type="button"
-        className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[color-mix(in_srgb,var(--brand-navy)_18%,transparent)] bg-white text-brand-navy"
+        className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-[var(--line)] bg-[var(--surface)] text-[var(--ink)]"
         aria-expanded={open}
         aria-controls="mobile-nav"
         aria-label={open ? closeLabel : openLabel}
@@ -47,14 +47,14 @@ export function MobileMenu({ items, cta, openLabel, closeLabel }: MobileMenuProp
       {open ? (
         <div
           id="mobile-nav"
-          className="fixed inset-x-0 top-[4.25rem] z-50 border-b border-[color-mix(in_srgb,var(--brand-navy)_12%,transparent)] bg-brand-cream px-4 py-4 shadow-lg"
+          className="fixed inset-x-0 top-16 z-50 border-b border-[var(--line)] bg-[var(--bg)] px-4 py-4 shadow-lg"
         >
           <nav className="container-site flex flex-col gap-1" aria-label="Mobile">
             {items.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="rounded-xl px-3 py-3 text-base font-medium text-brand-navy hover:bg-white"
+                className="rounded-xl px-3 py-3 text-base font-medium text-[var(--ink)] hover:bg-[var(--surface)]"
                 onClick={() => setOpen(false)}
               >
                 {item.label}

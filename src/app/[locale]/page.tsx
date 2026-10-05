@@ -27,11 +27,12 @@ export default async function HomePage({
 
   return (
     <>
-      <section className="overflow-hidden border-b border-[color-mix(in_srgb,var(--brand-navy)_10%,transparent)] bg-[linear-gradient(160deg,#f2eee9_0%,#fff_48%,#f7f1ea_100%)]">
-        <div className="container-site grid items-center gap-12 py-14 lg:grid-cols-[1.05fr_0.95fr] lg:py-20">
+      <section className="relative overflow-hidden border-b border-[var(--line)]">
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-[28rem] bg-[radial-gradient(ellipse_at_top,rgba(237,101,33,0.16),transparent_58%)]" />
+        <div className="container-site relative grid items-center gap-12 py-16 lg:grid-cols-[1.05fr_0.95fr] lg:py-24">
           <div className="fade-up max-w-xl">
             <p className="eyebrow">{t("hero.eyebrow")}</p>
-            <h1 className="text-4xl sm:text-5xl lg:text-[3.35rem]">{t("hero.title")}</h1>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl">{t("hero.title")}</h1>
             <p className="mt-5 text-base text-muted sm:text-lg">{t("hero.subtitle")}</p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link href="/programs" className="btn btn-primary">
@@ -64,13 +65,13 @@ export default async function HomePage({
           <ProcessDiagram phases={phases} />
 
           <div className="mt-14">
-            <h3 className="mb-6 text-center font-sans text-lg font-bold text-brand-navy">
+            <h3 className="mb-6 text-center font-sans text-lg font-bold">
               {t("process.modalitiesTitle")}
             </h3>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {modalities.map((key) => (
-                <article key={key} className="rounded-2xl bg-white p-5 shadow-[0_10px_28px_rgba(63,77,105,0.08)]">
-                  <h4 className="font-sans text-base font-bold text-brand-navy">
+                <article key={key} className="surface-card p-5 shadow-none">
+                  <h4 className="font-sans text-base font-bold">
                     {t(`process.modalities.${key}.title`)}
                   </h4>
                   <p className="mt-2 text-sm text-muted">{t(`process.modalities.${key}.desc`)}</p>
@@ -81,7 +82,7 @@ export default async function HomePage({
         </div>
       </section>
 
-      <section className="section bg-white">
+      <section className="section border-y border-[var(--line)] bg-[color-mix(in_srgb,var(--surface)_55%,var(--bg))]">
         <div className="container-site">
           <div className="mx-auto mb-10 max-w-2xl text-center">
             <p className="eyebrow">{t("programs.eyebrow")}</p>
@@ -91,14 +92,14 @@ export default async function HomePage({
 
           <div className="grid gap-6 lg:grid-cols-2">
             <article className="surface-card flex flex-col p-6 sm:p-8">
-              <span className="w-fit rounded-full bg-brand-cream px-3 py-1 text-xs font-bold text-brand-navy">
+              <span className="w-fit rounded-full border border-[var(--line)] bg-brand-cream px-3 py-1 text-xs font-bold tracking-wide text-[var(--btn-ink)] uppercase">
                 {t("programs.skillpath.badge")}
               </span>
-              <h3 className="mt-4 font-sans text-2xl font-bold text-brand-navy">
+              <h3 className="mt-4 font-sans text-2xl font-bold">
                 {t("programs.skillpath.title")}
               </h3>
               <p className="mt-3 text-muted">{t("programs.skillpath.desc")}</p>
-              <ul className="mt-5 space-y-2 text-sm text-brand-navy">
+              <ul className="mt-5 space-y-2 text-sm">
                 {skillpathItems.map((item) => (
                   <li key={item} className="flex gap-2">
                     <span className="text-brand-orange">•</span>
@@ -114,10 +115,10 @@ export default async function HomePage({
             </article>
 
             <article className="surface-card flex flex-col p-6 sm:p-8">
-              <span className="w-fit rounded-full bg-brand-orange/15 px-3 py-1 text-xs font-bold text-brand-orange">
+              <span className="w-fit rounded-full border border-[color-mix(in_srgb,var(--brand-orange)_45%,transparent)] bg-brand-orange/15 px-3 py-1 text-xs font-bold tracking-wide text-brand-orange-soft uppercase">
                 {t("programs.skillparenting.badge")}
               </span>
-              <h3 className="mt-4 font-sans text-2xl font-bold text-brand-navy">
+              <h3 className="mt-4 font-sans text-2xl font-bold">
                 {t("programs.skillparenting.title")}
               </h3>
               <p className="mt-3 text-muted">{t("programs.skillparenting.desc")}</p>
@@ -125,7 +126,7 @@ export default async function HomePage({
                 {parentingStats.map((stat) => (
                   <span
                     key={stat}
-                    className="rounded-full border border-[color-mix(in_srgb,var(--brand-navy)_14%,transparent)] px-3 py-1 text-xs font-semibold text-brand-navy"
+                    className="rounded-full border border-[var(--line)] px-3 py-1 text-xs font-semibold text-brand-paper"
                   >
                     {stat}
                   </span>
@@ -152,14 +153,14 @@ export default async function HomePage({
             {(["implement", "engage", "measure"] as const).map((key, index) => (
               <article
                 key={key}
-                className="rounded-2xl bg-brand-navy p-6 text-white"
+                className="surface-card p-6 shadow-none"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <p className="text-sm font-bold text-brand-orange">0{index + 1}</p>
-                <h3 className="mt-3 font-sans text-xl font-bold text-white">
+                <p className="text-4xl font-bold tracking-tight text-brand-orange">0{index + 1}</p>
+                <h3 className="mt-3 font-sans text-xl font-bold">
                   {t(`implementation.items.${key}.title`)}
                 </h3>
-                <p className="mt-3 text-sm text-white/75">
+                <p className="mt-3 text-sm text-muted">
                   {t(`implementation.items.${key}.desc`)}
                 </p>
               </article>
@@ -170,9 +171,9 @@ export default async function HomePage({
 
       <section className="section pt-0">
         <div className="container-site">
-          <div className="overflow-hidden rounded-[1.75rem] bg-[linear-gradient(135deg,#3f4d69_0%,#2c3649_60%,#ed6521_160%)] px-6 py-12 text-center text-white sm:px-10">
-            <h2 className="text-3xl text-white sm:text-4xl">{t("finalCta.title")}</h2>
-            <p className="mx-auto mt-4 max-w-2xl text-white/80">{t("finalCta.subtitle")}</p>
+          <div className="overflow-hidden rounded-[1.75rem] border border-[var(--line)] bg-brand-navy px-6 py-14 text-center sm:px-10">
+            <h2 className="text-3xl text-brand-paper sm:text-4xl">{t("finalCta.title")}</h2>
+            <p className="mx-auto mt-4 max-w-2xl text-brand-paper/75">{t("finalCta.subtitle")}</p>
             <Link href="/contact" className="btn btn-primary mt-8">
               {t("finalCta.cta")}
             </Link>

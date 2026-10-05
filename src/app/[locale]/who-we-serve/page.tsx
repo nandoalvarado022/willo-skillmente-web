@@ -24,10 +24,10 @@ export default async function WhoWeServePage({
         <div className="container-site grid gap-5 md:grid-cols-2">
           {segments.map((key, index) => (
             <article key={key} className="surface-card p-6 sm:p-8">
-              <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-brand-cream font-bold text-brand-navy">
+              <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl border border-[var(--line)] bg-[var(--bg)] text-sm font-bold tracking-wide text-brand-orange">
                 {String(index + 1).padStart(2, "0")}
               </div>
-              <h2 className="font-sans text-xl font-bold text-brand-navy">
+              <h2 className="font-sans text-xl font-bold">
                 {t(`segments.${key}.title`)}
               </h2>
               <p className="mt-3 text-muted">{t(`segments.${key}.desc`)}</p>
@@ -36,7 +36,7 @@ export default async function WhoWeServePage({
         </div>
 
         <div className="container-site mt-12">
-          <div className="rounded-[1.5rem] bg-white px-6 py-10 text-center shadow-[0_16px_40px_rgba(63,77,105,0.08)]">
+          <div className="rounded-[1.5rem] border border-[var(--line)] bg-brand-navy px-6 py-10 text-center">
             <h2 className="text-2xl sm:text-3xl">{t("cta.title")}</h2>
             <Link href="/contact" className="btn btn-primary mt-6">
               {t("cta.button")}

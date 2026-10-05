@@ -40,15 +40,15 @@ export default async function AboutPage({
             <h2 className="text-3xl">{t("why.title")}</h2>
             <p className="mt-4 text-muted">{t("why.body")}</p>
           </div>
-          <div className="rounded-2xl bg-brand-navy p-6 text-white sm:p-8">
-            <h3 className="font-sans text-xl font-bold text-white">{t("vision.title")}</h3>
+          <div className="rounded-2xl border border-[var(--line)] bg-brand-navy p-6 text-brand-paper sm:p-8">
+            <h3 className="font-sans text-xl font-bold text-brand-paper">{t("vision.title")}</h3>
             <ul className="mt-5 space-y-4">
               {(["scale", "micro", "impact"] as const).map((key) => (
                 <li key={key}>
                   <p className="font-semibold text-brand-orange">
                     {t(`vision.items.${key}.title`)}
                   </p>
-                  <p className="mt-1 text-sm text-white/75">{t(`vision.items.${key}.desc`)}</p>
+                  <p className="mt-1 text-sm text-brand-paper/75">{t(`vision.items.${key}.desc`)}</p>
                 </li>
               ))}
             </ul>
@@ -56,7 +56,7 @@ export default async function AboutPage({
         </div>
       </section>
 
-      <section className="section bg-white">
+      <section className="section border-t border-[var(--line)] bg-[color-mix(in_srgb,var(--surface)_55%,var(--bg))]">
         <div className="container-site">
           <div className="mb-8 max-w-2xl">
             <h2 className="text-3xl">{t("team.title")}</h2>

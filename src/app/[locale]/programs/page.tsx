@@ -30,7 +30,7 @@ export default async function ProgramsPage({
           <div className="mt-8 grid gap-4 md:grid-cols-2">
             {skillpathKeys.map((key) => (
               <article key={key} className="surface-card p-6">
-                <h3 className="font-sans text-xl font-bold text-brand-navy">
+                <h3 className="font-sans text-xl font-bold">
                   {t(`skillpath.items.${key}.title`)}
                 </h3>
                 <p className="mt-2 text-sm font-semibold text-brand-orange">
@@ -43,20 +43,20 @@ export default async function ProgramsPage({
         </div>
       </section>
 
-      <section id="skillparenting" className="section scroll-mt-24 bg-white">
+      <section id="skillparenting" className="section scroll-mt-24 border-y border-[var(--line)] bg-[color-mix(in_srgb,var(--surface)_55%,var(--bg))]">
         <div className="container-site">
           <h2 className="text-3xl sm:text-4xl">{t("skillparenting.title")}</h2>
           <p className="mt-3 max-w-2xl text-muted">{t("skillparenting.subtitle")}</p>
           <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             {parentingKeys.map((key, index) => (
-              <article key={key} className="rounded-2xl border border-[color-mix(in_srgb,var(--brand-navy)_10%,transparent)] bg-brand-cream/40 p-6">
-                <p className="text-xs font-bold tracking-wide text-brand-orange uppercase">
+              <article key={key} className="surface-card p-6 shadow-none">
+                <p className="text-xs font-bold tracking-[0.14em] text-brand-orange uppercase">
                   {String(index + 1).padStart(2, "0")}
                 </p>
-                <h3 className="mt-2 font-sans text-lg font-bold text-brand-navy">
+                <h3 className="mt-2 font-sans text-lg font-bold">
                   {t(`skillparenting.items.${key}.title`)}
                 </h3>
-                <p className="mt-2 text-sm font-semibold text-brand-navy-soft">
+                <p className="mt-2 text-sm font-semibold text-brand-orange-soft">
                   {t(`skillparenting.items.${key}.focus`)}
                 </p>
                 <p className="mt-3 text-sm text-muted">{t(`skillparenting.items.${key}.desc`)}</p>
@@ -73,7 +73,7 @@ export default async function ProgramsPage({
               <p className="eyebrow">{t("ttt.eyebrow")}</p>
               <h2 className="text-3xl">{t("ttt.title")}</h2>
               <p className="mt-4 text-muted">{t("ttt.subtitle")}</p>
-              <ul className="mt-6 space-y-3 text-sm text-brand-navy">
+              <ul className="mt-6 space-y-3 text-sm">
                 {tttPoints.map((point) => (
                   <li key={point} className="flex gap-2">
                     <span className="text-brand-orange">→</span>
@@ -82,7 +82,7 @@ export default async function ProgramsPage({
                 ))}
               </ul>
             </div>
-            <div className="rounded-2xl bg-brand-navy p-8 text-center text-white">
+            <div className="rounded-2xl border border-[var(--line)] bg-brand-navy p-8 text-center">
               <Link href="/contact" className="btn btn-primary">
                 {t("ttt.cta")}
               </Link>

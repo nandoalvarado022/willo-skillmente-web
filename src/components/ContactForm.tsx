@@ -17,7 +17,7 @@ export function ContactForm({ labels }: ContactFormProps) {
   if (status === "success") {
     return (
       <div className="surface-card p-6 sm:p-8">
-        <h3 className="font-sans text-xl font-bold text-brand-navy">
+        <h3 className="font-sans text-xl font-bold">
           {labels.successTitle}
         </h3>
         <p className="mt-2 text-muted">{labels.successBody}</p>
@@ -54,14 +54,14 @@ export function ContactForm({ labels }: ContactFormProps) {
       <Field id="phone" label={labels.phone} type="tel" />
 
       <fieldset>
-        <legend className="mb-3 text-sm font-semibold text-brand-navy">
+        <legend className="mb-3 text-sm font-semibold text-ink">
           {labels.interests}
         </legend>
         <div className="grid gap-2 sm:grid-cols-2">
           {INTEREST_KEYS.map((key) => (
             <label
               key={key}
-              className="flex cursor-pointer items-center gap-2 rounded-xl border border-[color-mix(in_srgb,var(--brand-navy)_12%,transparent)] bg-brand-cream/50 px-3 py-2.5 text-sm"
+              className="flex cursor-pointer items-center gap-2 rounded-xl border border-[var(--line)] bg-[color-mix(in_srgb,var(--bg)_72%,transparent)] px-3 py-2.5 text-sm"
             >
               <input
                 type="checkbox"
@@ -74,14 +74,14 @@ export function ContactForm({ labels }: ContactFormProps) {
           ))}
         </div>
         {errors.interests ? (
-          <p className="mt-2 text-sm text-brand-orange">{errors.interests}</p>
+          <p className="mt-2 text-sm text-brand-orange-soft">{errors.interests}</p>
         ) : null}
       </fieldset>
 
       <div>
         <label
           htmlFor="message"
-          className="mb-2 block text-sm font-semibold text-brand-navy"
+          className="mb-2 block text-sm font-semibold text-ink"
         >
           {labels.message}
         </label>
@@ -89,16 +89,16 @@ export function ContactForm({ labels }: ContactFormProps) {
           id="message"
           name="message"
           rows={5}
-          className="w-full rounded-xl border border-[color-mix(in_srgb,var(--brand-navy)_18%,transparent)] bg-white px-3 py-2.5 text-sm outline-none focus:border-brand-orange focus:ring-2 focus:ring-[var(--ring)]"
+          className="input"
           required
         />
         {errors.message ? (
-          <p className="mt-2 text-sm text-brand-orange">{errors.message}</p>
+          <p className="mt-2 text-sm text-brand-orange-soft">{errors.message}</p>
         ) : null}
       </div>
 
       {status === "error" ? (
-        <div className="rounded-xl bg-brand-orange/10 px-4 py-3 text-sm text-brand-navy">
+        <div className="rounded-xl border border-[color-mix(in_srgb,var(--brand-orange)_35%,transparent)] bg-brand-orange/10 px-4 py-3 text-sm text-brand-paper">
           <p className="font-semibold">{labels.errorTitle}</p>
           <p>{labels.errorBody}</p>
         </div>
@@ -132,7 +132,7 @@ function Field({
     <div>
       <label
         htmlFor={id}
-        className="mb-2 block text-sm font-semibold text-brand-navy"
+        className="mb-2 block text-sm font-semibold text-ink"
       >
         {label}
       </label>
@@ -141,9 +141,9 @@ function Field({
         name={id}
         type={type}
         required={required}
-        className="w-full rounded-xl border border-[color-mix(in_srgb,var(--brand-navy)_18%,transparent)] bg-white px-3 py-2.5 text-sm outline-none focus:border-brand-orange focus:ring-2 focus:ring-[var(--ring)]"
+        className="input"
       />
-      {error ? <p className="mt-2 text-sm text-brand-orange">{error}</p> : null}
+      {error ? <p className="mt-2 text-sm text-brand-orange-soft">{error}</p> : null}
     </div>
   );
 }

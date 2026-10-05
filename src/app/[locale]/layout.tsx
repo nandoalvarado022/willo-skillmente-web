@@ -1,7 +1,7 @@
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
-import { Fraunces, Manrope } from "next/font/google";
+import { Inter } from "next/font/google";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
@@ -10,13 +10,7 @@ import { getNavItems } from "@/config/navigation";
 import { routing } from "@/i18n/routing";
 import "../globals.css";
 
-const display = Fraunces({
-  subsets: ["latin"],
-  variable: "--font-display",
-  weight: ["500", "600", "700"],
-});
-
-const body = Manrope({
+const body = Inter({
   subsets: ["latin"],
   variable: "--font-body",
   weight: ["400", "500", "600", "700", "800"],
@@ -69,7 +63,7 @@ export default async function LocaleLayout({
   const mobileItems = getNavItems(navLabels);
 
   return (
-    <html lang={locale} className={`${display.variable} ${body.variable} h-full`}>
+    <html lang={locale} className={`${body.variable} h-full`}>
       <body className="flex min-h-full flex-col antialiased">
         <NextIntlClientProvider messages={messages}>
           <div className="relative">

@@ -16,10 +16,10 @@ export function Header({ labels, languageSwitcher, mobileMenu }: HeaderProps) {
   const items = getNavItems(labels);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-[color-mix(in_srgb,var(--brand-navy)_12%,transparent)] bg-[color-mix(in_srgb,var(--brand-cream)_92%,white)]/95 backdrop-blur-md">
-      <div className="relative container-site flex h-[4.25rem] items-center justify-between gap-4">
+    <header className="sticky top-0 z-50 border-b border-[var(--line)] bg-[color-mix(in_srgb,var(--bg)_86%,transparent)] backdrop-blur-md">
+      <div className="relative container-site flex h-16 items-center justify-between gap-4">
         <Link href="/" aria-label="SkillMente home" className="shrink-0">
-          <Logo />
+          <Logo light />
         </Link>
 
         <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary">
@@ -27,7 +27,7 @@ export function Header({ labels, languageSwitcher, mobileMenu }: HeaderProps) {
             <Link
               key={item.href}
               href={item.href}
-              className="rounded-full px-3 py-2 text-sm font-medium text-brand-navy transition hover:bg-white hover:text-brand-navy-deep"
+              className="rounded-lg px-3 py-2 text-sm font-medium text-[color-mix(in_srgb,var(--brand-paper)_72%,transparent)] transition hover:text-[var(--ink)]"
             >
               {item.label}
             </Link>

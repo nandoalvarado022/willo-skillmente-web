@@ -16,7 +16,7 @@ export function LanguageSwitcher() {
 
   return (
     <div
-      className="inline-flex items-center rounded-full border border-[color-mix(in_srgb,var(--brand-navy)_18%,transparent)] bg-white p-1"
+      className="inline-flex items-center rounded-full border border-[var(--line)] bg-[color-mix(in_srgb,var(--bg)_70%,black)] p-0.5"
       role="group"
       aria-label="Language"
     >
@@ -27,10 +27,10 @@ export function LanguageSwitcher() {
             key={code}
             type="button"
             onClick={() => switchLocale(code)}
-            className={`min-w-10 rounded-full px-2.5 py-1.5 text-xs font-bold uppercase transition ${
+            className={`min-w-9 rounded-full px-2.5 py-1 text-[0.68rem] font-bold tracking-wide uppercase transition ${
               active
-                ? "bg-brand-navy text-white"
-                : "text-brand-navy-soft hover:text-brand-navy"
+                ? "bg-[var(--surface)] text-[var(--ink)]"
+                : "text-[var(--muted)] hover:text-[var(--ink)]"
             }`}
             aria-pressed={active}
           >
