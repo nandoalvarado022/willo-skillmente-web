@@ -1,0 +1,81 @@
+src/app/[locale]/programs/page.tsx
+  s_b6c2cad14571b0::t_95d5820f4ed937 76
+  s_b6c2cad14571b0::t_a263b2b7668ba1 33
+  s_b6c2cad14571b0::t_aa25b0eedf92ef 46
+  s_b6c2cad14571b0::t_6bd4250d9491ea 85
+  s_b6c2cad14571b0::t_7e2f3f48cea378 52-53,56,59
+src/app/[locale]/contact/page.tsx
+  s_b6c2cad14571b0::t_5af015931cac17 63
+  s_b6c2cad14571b0::t_b1d74e68b7fca5 54-55
+src/components/TeamGrid.tsx
+  s_b6c2cad14571b0::t_87c4b77fd1c22b 17,20
+src/app/[locale]/page.tsx
+  s_b6c2cad14571b0::t_942f3be9fa0231 118,121
+  s_b6c2cad14571b0::t_c17d219c75f7ff 95,98,102
+  s_b6c2cad14571b0::t_85c87fe3f836ff 129
+  s_b6c2cad14571b0::t_3f2863dd06c983 156,159-160,163
+  s_b6c2cad14571b0::t_763e3b2c4e5760 68,73-74
+  s_b6c2cad14571b0::t_9f681e5a49b4b6 30-32,35
+  s_b6c2cad14571b0::t_1f999b4192d538 85
+  s_b6c2cad14571b0::t_c7120bcd0e8127 174-176
+src/components/ProcessDiagram.tsx
+  s_b6c2cad14571b0::t_b57c66deefe1a4 16,19-22
+src/components/HeroMockups.tsx
+  s_b6c2cad14571b0::t_d28f2f6d3962bc 22,24-32,37-41,47-49,51-54,59,68-80
+src/components/Footer.tsx
+  s_b6c2cad14571b0::t_9702667a804db3 24,28-30,33,40,43,46,55,58,60,65,73-74,76
+src/app/[locale]/how-it-works/page.tsx
+  s_b6c2cad14571b0::t_8d836f834141e2 25
+  s_b6c2cad14571b0::t_70026e7948d6e5 34,37-38
+  s_b6c2cad14571b0::t_6a259874df4ad2 49-50
+src/app/globals.css
+  s_b6c2cad14571b0::t_be7e6b960bba73 46
+  s_b6c2cad14571b0::t_23b8a8e6b3b317 7-10,12-20,27,36,47,52,62-66,78-82,101-103,107-108,119-120,124,129-130,134-136,140,145,150-158,160,165-167,171-186,208,215,224
+src/app/[locale]/layout.tsx
+  s_b6c2cad14571b0::t_7402f892d219af 66
+  s_b6c2cad14571b0::t_1662765f39ead9 4
+  s_b6c2cad14571b0::t_49fd3fc68b8b0e 13
+src/components/Logo.tsx
+  s_b6c2cad14571b0::t_031f4280ed2404 11,16
+src/components/MobileMenu.tsx
+  s_b6c2cad14571b0::t_9a51453f9a3712 21,50,57
+src/app/[locale]/who-we-serve/page.tsx
+  s_b6c2cad14571b0::t_59c69d1e0a0fdd 27,30
+  s_b6c2cad14571b0::t_ea100e2560dc1d 39
+src/components/LanguageSwitcher.tsx
+  s_b6c2cad14571b0::t_fbab70469ef3c8 19,30,32-33
+src/components/ContactForm.tsx
+  s_b6c2cad14571b0::t_338b3bfb262014 92
+  s_b6c2cad14571b0::t_ecc4b28e60def4 135
+  s_b6c2cad14571b0::t_89adaf2c7de4dc 101
+  s_b6c2cad14571b0::t_8065e3ff8a308e 77,96,146
+  s_b6c2cad14571b0::t_8f55fd1796a99f 57
+  s_b6c2cad14571b0::t_5cff58eb475934 20
+  s_b6c2cad14571b0::t_f8728dec4e70c0 84
+  s_b6c2cad14571b0::t_4a9fd019f43af3 144
+  s_b6c2cad14571b0::t_c21f18aa085bbc 64
+src/app/[locale]/about/page.tsx
+  s_b6c2cad14571b0::t_0717c656553279 51
+  s_b6c2cad14571b0::t_20720998649283 43-44
+  s_b6c2cad14571b0::t_22b01677beb5ec 59
+src/components/PageHero.tsx
+  s_b6c2cad14571b0::t_0382d0af7e3ea0 9-10,12-13
+src/components/Header.tsx
+  s_b6c2cad14571b0::t_5f421c981239d4 19-20,22,30
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "42a652171e18d6855efb784c9062d90af9bca047",
+  "prompts": {},
+  "sessions": {
+    "s_b6c2cad14571b0": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "a461ef56-5fc5-4022-86cd-ae71e85b0fa8",
+        "model": "grok-4.7"
+      },
+      "human_author": "Nando (Hernando Alvarado) <nandoalvarado022@gmail.com>"
+    }
+  }
+}
